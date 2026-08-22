@@ -41,7 +41,7 @@ Perfect for:
 
 ### OBS Setup – IMPORTANT
 
-Use this as a **Display Capture**, NOT as a Browser Source. The overlay uses a transparent background with `backdrop-filter: blur(8px)` that only works correctly when captured as a window.
+Use this as a **Display Capture**, NOT as a Browser Source.
 
 **Step-by-step:**
 
