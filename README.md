@@ -41,20 +41,26 @@ Perfect for:
 
 ### OBS Setup – IMPORTANT
 
-Use this as a **Display Capture**, NOT as a Browser Source.
+Use this as a **Window Capture / Display Capture**, NOT as a Browser Source. If you use it as a Browser Source, the sync between Control and Overlay breaks and the board won't update.
+
+**Why not Browser Source?**
+
+The board state is saved in `localStorage` and in the URL hash (`#s=...`) and synced via the `storage` event between tabs. OBS Browser Sources run in an isolated context – they don't share `localStorage` with your Chrome/Firefox window and don't see the hash updates. Result: your overlay stays empty or frozen.
+
+Window Capture / Display Capture captures the real browser tab, so it always shows the live synced state.
 
 **Step-by-step:**
 
 1.  In GeoBingo, click **Overlay Mode ↗** – a new window opens at `?mode=overlay#s=...`
-2.  Make that window borderless / resize to ~720px width. In Chrome you can use a popup window.
+2.  Keep your main GeoBingo tab (Control) open – this is where you edit tasks, paste Maps links, and mark cells as found.
 3.  In OBS:
-    - Add Source -> **Window Capture** or **Display Capture** (Mac) / **Window Capture (macOS)** -> Select the overlay browser window
+    - Add Source -> **Window Capture** -> Select the Overlay browser window
     - OR: Add Source -> **Display Capture** and crop to just the overlay window
-    - Do NOT use Browser Source – it will render the transparent background as black/white and the blur will break.
-4.  Use Chroma Key or just place it over your gameplay / maps. The overlay has `background: #ffffffe8` with blur, so it stays readable over any map.
-5.  Keep the **Control** window (`?mode=control` or default view) open on your second monitor to edit tasks and mark cells – the overlay updates live.
+    - Do NOT use Browser Source.
+4.  Place the capture over your Google Maps / Street View capture.
+5.  Both windows sync automatically – marking a cell in Control instantly updates the Overlay in OBS.
 
-> Tip: Set OBS Window Capture to "Window Match Priority: Window Title must match" so it keeps tracking the overlay tab.
+> Tip: In Window Capture, set "Window Match Priority: Window Title must match" so OBS keeps tracking the overlay tab even after reloads.
 
 ### Configuration Import
 
