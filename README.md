@@ -1,6 +1,6 @@
 # GeoBingo
 
-Offline, stream-friendly GeoBingo board for IRL exploration games. Create a bingo card with custom tasks, play it together with Google Maps / Street View, and use it as a transparent overlay in OBS for your stream.
+Offline, stream-friendly GeoBingo board for online exploration. Create a bingo card with custom tasks, play it together with Google Maps / Street View, and use it as a transparent overlay in OBS for your stream.
 
 Live version: just open `index.html` – no build, no backend, no tracking.
 
@@ -10,13 +10,13 @@ Live version: just open `index.html` – no build, no backend, no tracking.
 
 You get a 3×3 or 5×5 board. Each cell is a task like "Fountain", "Abandoned building", "Dog in clothes", "Gas station from the 90s".
 
-Players have to find the spot IRL or on Google Maps / Street View and prove it. Clicking a cell marks it as **found** and optionally opens a proof link (Google Maps URL, Street View link, image).
+Players have to find the spot on Google Maps / Google Street View and prove it with a link. Clicking a cell marks it as **found** and optionally opens the proof link (Maps / Street View URL).
 
 Perfect for:
-- Geoguesser-style community streams
-- City exploration IRL streams
-- Road trips
-- Discord / Twitch community challenges
+- GeoGuessr-style community streams
+- Google Maps challenges
+- Discord / Twitch community games
+- Online exploration with friends
 
 ### Features
 
@@ -34,7 +34,7 @@ Perfect for:
 ### How to Play (with Google Maps)
 
 1.  Create your board (see Import below)
-2.  For each task, players must find the location on Google Maps / Street View
+2.  For each task, players search on Google Maps / Street View
 3.  When found, paste the proof link into the cell's second input: `Paste Google Maps / Street View link`
 4.  Click the cell to mark it as found. Clicking again opens the proof.
 5.  Bingo when you complete a row, column or diagonal!
